@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 500vh;
+    background-color: black;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000; 
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+header.rolagem {
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+header.rolagem a,
+header.rolagem i {
+    color: crimson;
+}
+
+header i {
+    font-size: 30px;
+    color: white;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    color: black; 
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: white; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: crimson;
+    color: white;
+    border-color: crimson;
+}
+
+#logo {
+    height: 50px; 
+    width: auto; 
+    margin-bottom: 20px; 
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url(SkyBlock_renders_bank.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.banner2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url(SkyBlock_renders_dungeonhub.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: yellow; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    font-size: 4em; 
+    margin: 0;
+}
+
+.banner5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url(SkyBlock_renders_kuudras_hollow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: yellow; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    font-size: 4em; 
+}
+
+.banner h1 {
+    font-size: 4em; 
+    margin: 0;
+}
+
+.banner span {
+    color: #ffdf00; 
+}
+
+.video-container {
+    background-color: bisque;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.video-wrapper {
+    flex: 1;
+    margin-right: 20px; 
+}
+
+.descricao {
+    flex: 2;
+    max-width: 600px; 
+    color: white; 
+}
+
+.descricao h2 {
+    color: #ffdf00; 
+    font-size: 2em; 
+    margin-bottom: 20px; 
+}
+
+.descricao .skyblock {
+    color: crimson; 
+}
+
+.descricao-jogo {
+    color: black;
+    font-size: 1.2em; 
+    line-height: 1.6; 
+}
+
+.titulo-jogo {
+    color: #ffdf00;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.titulo-jogo2 {
+    color: #ffdf00;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+.titulo-jo {
+    color: #ffdf00;
+    font-size: 2em;
+    margin-left: -310px ;
+}
+
+.flip-card-section {
+    background-color: bisque;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px; 
+    margin: 10px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    background-color: #555;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.flip-card h3 {
+    margin-bottom: 10px;
+}
+
+.slider{
+  margin: center;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+}
+
+.slide img{
+    width: 800px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #ffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right:10px;
+}
+
+.manual-btn:hover{
+    background-color: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left:0;
+}
+
+#radio2:checked ~ .first{
+    margin-left:-25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left:-50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left:-75%;
+}
+
+#radio5:checked ~ .first{
+    margin-left:-100%;
+}
+
+.navigation div{
+    border: 2px solid blueviolet;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#textodekuudra{
+    text-align: left;
+    margin-left: 0%;
+}
+
+#centro{
+    margin-left: -100px;
+}
+
+#boxform {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #5a2121; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#taixapreta{
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.faixa-separadora {
+    background: linear-gradient(to right, #ffdf00, crimson); 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    margin: 20px 0; 
+    font-size: 2em; 
+    font-weight: bold; 
+    text-shadow: none; 
+    border-radius: 10px; 
+    box-shadow: none; 
+    border: none; 
+}
+
+body {
+    background-color: #ffe4c4; 
+}
+
+#decision-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+#next-question {
+    margin-top: 20px;
+}
+
+#submit-button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#submit-button:hover {
+    background-color: darkred;
+    transform: scale(1.05); 
+}
+
+input[type="text"]:focus, select:focus {
+    border: 2px solid crimson;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.7); 
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.resultado {
+    background-color: #e7f7e7;
+    color: #4caf50;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid #4caf50;
+    width: 80%;
+    margin-left: 100px;
+}
